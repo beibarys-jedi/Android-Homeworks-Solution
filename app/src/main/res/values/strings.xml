@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">My Homeworks</string>
     <string name="pin_hint">Введите код</string>
+    <string name="pin_is_correct">Код верен</string>
 </resources>
