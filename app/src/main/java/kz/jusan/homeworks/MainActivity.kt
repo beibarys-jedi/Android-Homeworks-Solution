@@ -8,6 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 
 const val CORRECT_PIN = "1567"
+const val PIN_LENGTH = 4
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         initOkButton()
     }
 
-    fun initNumButtons() {
+    private fun initNumButtons() {
 
         val btnOne: Button = findViewById(R.id.btn_one)
         btnOne.setOnClickListener(this::onNumButtonClick)
@@ -55,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         btnZero.setOnClickListener(this::onNumButtonClick)
     }
 
-    fun initBackspaceButton() {
+    private fun initBackspaceButton() {
         val btnBackspace: Button = findViewById(R.id.btn_backspace)
         btnBackspace.setOnClickListener {
             pinText = pinText.dropLast(1)
@@ -63,18 +64,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun initOkButton() {
+    private fun initOkButton() {
         val btnOk: Button = findViewById(R.id.btn_ok)
         btnOk.setOnClickListener { checkIfPinIsCorrect() }
     }
 
-    fun checkIfPinIsCorrect() {
+    private fun checkIfPinIsCorrect() {
         if (pinText == CORRECT_PIN) {
             Toast.makeText(this, R.string.pin_is_correct, Toast.LENGTH_LONG).show()
         }
     }
 
-    fun onNumButtonClick(view: View) {
+    private fun onNumButtonClick(view: View) {
         if (view !is Button) {
             return
         }
@@ -85,10 +86,12 @@ class MainActivity : AppCompatActivity() {
         updatePinTextView()
     }
 
-    fun updatePinTextView() {
+    private fun updatePinTextView() {
         val tvPin: TextView = findViewById(R.id.tv_pin)
+        if (pinText.length > PIN_LENGTH) {
+            pinText = pinText.substring(0, PIN_LENGTH)
+        }
         tvPin.text = pinText
     }
-
 
 }
