@@ -7,12 +7,140 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_pin"
+        style="@style/PinText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginBottom="30dp"
+        android:hint="@string/pin_hint"
+        app:layout_constraintBottom_toTopOf="@id/btn_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_five"
+        style="@style/PinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_four"
+        style="@style/PinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="4"
+        app:layout_constraintBottom_toBottomOf="@id/btn_five"
+        app:layout_constraintEnd_toStartOf="@id/btn_five" />
+
+    <Button
+        android:id="@+id/btn_six"
+        style="@style/PinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="6"
+        app:layout_constraintBottom_toBottomOf="@id/btn_five"
+        app:layout_constraintStart_toEndOf="@id/btn_five" />
+
+    <Button
+        android:id="@+id/btn_eight"
+        style="@style/PinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_five" />
+
+    <Button
+        android:id="@+id/btn_seven"
+        style="@style/PinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="7"
+        app:layout_constraintBottom_toBottomOf="@id/btn_eight"
+        app:layout_constraintEnd_toStartOf="@id/btn_eight" />
+
+    <Button
+        android:id="@+id/btn_nine"
+        style="@style/PinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="9"
+        app:layout_constraintBottom_toBottomOf="@id/btn_eight"
+        app:layout_constraintStart_toEndOf="@id/btn_eight" />
+
+
+    <Button
+        android:id="@+id/btn_two"
+        style="@style/PinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@id/btn_five"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_one"
+        style="@style/PinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@id/btn_two"
+        app:layout_constraintEnd_toStartOf="@id/btn_two" />
+
+    <Button
+        android:id="@+id/btn_three"
+        style="@style/PinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="3"
+        app:layout_constraintBottom_toBottomOf="@id/btn_two"
+        app:layout_constraintStart_toEndOf="@id/btn_two" />
+
+    <Button
+        android:id="@+id/btn_zero"
+        style="@style/PinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_eight" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        style="@style/PinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="&lt;"
+        app:layout_constraintBottom_toBottomOf="@id/btn_zero"
+        app:layout_constraintEnd_toStartOf="@id/btn_zero" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        style="@style/PinButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@android:string/ok"
+        app:layout_constraintBottom_toBottomOf="@id/btn_zero"
+        app:layout_constraintStart_toEndOf="@id/btn_zero" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
