@@ -1,5 +1,6 @@
 package kz.jusan.homeworks
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -108,6 +109,8 @@ class MainActivity : AppCompatActivity() {
     private fun checkIfPinIsCorrect() {
         if (pinText == CORRECT_PIN) {
             Toast.makeText(this, R.string.pin_is_correct, Toast.LENGTH_LONG).show()
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
         } else {
             tvPin.setTextColor(errorColor)
         }
