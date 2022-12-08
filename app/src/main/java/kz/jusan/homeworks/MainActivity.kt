@@ -1,9 +1,10 @@
 package kz.jusan.homeworks
 
-import android.content.Context
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -12,10 +13,12 @@ import androidx.core.content.ContextCompat
 
 const val CORRECT_PIN = "1567"
 const val PIN_LENGTH = 4
+const val KEY_PIN = "pin"
 
 class MainActivity : AppCompatActivity() {
 
     private var pinText = ""
+    private var pinTextOnSave = ""
     lateinit var tvPin: TextView
 
     var errorColor: Int = Color.BLACK
@@ -24,12 +27,24 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Log.e("MainActivity", "Object ref = $this")
+
+
 
         initColors()
         initTvPin()
         initNumButtons()
         initBackspaceButton()
         initOkButton()
+
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+
+        pinText = savedInstanceState.getString(KEY_PIN) ?: ""
+        updatePinTextView()
+        checkIfPinIsCorrect()
     }
 
     private fun initColors() {
@@ -84,7 +99,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun initOkButton() {
         val btnOk: Button = findViewById(R.id.btn_ok)
-        btnOk.setOnClickListener { checkIfPinIsCorrect() }
+        btnOk.setOnClickListener {
+            checkIfPinIsCorrect()
+            pinTextOnSave = pinText
+        }
     }
 
     private fun checkIfPinIsCorrect() {
@@ -112,6 +130,12 @@ class MainActivity : AppCompatActivity() {
         }
         tvPin.text = pinText
         tvPin.setTextColor(pinTextColor)
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+        outState.putString(KEY_PIN, pinTextOnSave)
     }
 
 }
