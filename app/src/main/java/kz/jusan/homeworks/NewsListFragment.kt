@@ -71,6 +71,6 @@ class NewsListFragment : Fragment() {
         )
 
         Log.e(TAG, "News clicked= $news")
-        newsClickListener?.onNewsClick(news)
+        newsClickListener?.onNewsClick(index - 1)
     }
 }

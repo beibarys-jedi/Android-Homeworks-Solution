@@ -2,5 +2,5 @@ package kz.jusan.homeworks
 
 interface NewsClickListener {
 
-    fun onNewsClick(news: News)
+    fun onNewsClick(index: Int)
 }
