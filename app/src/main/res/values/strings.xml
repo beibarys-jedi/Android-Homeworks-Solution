@@ -2,4 +2,10 @@
     <string name="app_name">My Homeworks</string>
     <string name="pin_hint">Введите код</string>
     <string name="pin_is_correct">Код верен</string>
+    <string name="profile_user_name">Azat Serzhanov</string>
+    <string name="profile_user_email">azatserzhan@gmail.com</string>
+    <string name="share">Поделиться</string>
+    <string name="send_via_email">Отправить по почте</string>
+    <string name="call">Позвонить</string>
+    <string name="launch_camera">Запустить камеру</string>
 </resources>

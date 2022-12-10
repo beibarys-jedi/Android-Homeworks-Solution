@@ -21,10 +21,11 @@
 
     <Button
         android:id="@+id/btn_five"
-        style="@style/PinButton"
+        style="@style/AppButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="5"
+        android:textAppearance="@style/PinButtonTextAppearance"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,115 +33,126 @@
 
     <Button
         android:id="@+id/btn_four"
-        style="@style/PinButton"
+        style="@style/AppButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:text="4"
+        android:textAppearance="@style/PinButtonTextAppearance"
         app:layout_constraintBottom_toBottomOf="@id/btn_five"
         app:layout_constraintEnd_toStartOf="@id/btn_five" />
 
     <Button
         android:id="@+id/btn_six"
-        style="@style/PinButton"
+        style="@style/AppButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="6"
+        android:textAppearance="@style/PinButtonTextAppearance"
         app:layout_constraintBottom_toBottomOf="@id/btn_five"
         app:layout_constraintStart_toEndOf="@id/btn_five" />
 
     <Button
         android:id="@+id/btn_eight"
-        style="@style/PinButton"
+        style="@style/AppButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="8"
+        android:textAppearance="@style/PinButtonTextAppearance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_five" />
 
     <Button
         android:id="@+id/btn_seven"
-        style="@style/PinButton"
+        style="@style/AppButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:text="7"
+        android:textAppearance="@style/PinButtonTextAppearance"
         app:layout_constraintBottom_toBottomOf="@id/btn_eight"
         app:layout_constraintEnd_toStartOf="@id/btn_eight" />
 
     <Button
         android:id="@+id/btn_nine"
-        style="@style/PinButton"
+        style="@style/AppButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="9"
+        android:textAppearance="@style/PinButtonTextAppearance"
         app:layout_constraintBottom_toBottomOf="@id/btn_eight"
         app:layout_constraintStart_toEndOf="@id/btn_eight" />
 
 
     <Button
         android:id="@+id/btn_two"
-        style="@style/PinButton"
+        style="@style/AppButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:text="2"
+        android:textAppearance="@style/PinButtonTextAppearance"
         app:layout_constraintBottom_toTopOf="@id/btn_five"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_one"
-        style="@style/PinButton"
+        style="@style/AppButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:text="1"
+        android:textAppearance="@style/PinButtonTextAppearance"
         app:layout_constraintBottom_toBottomOf="@id/btn_two"
         app:layout_constraintEnd_toStartOf="@id/btn_two" />
 
     <Button
         android:id="@+id/btn_three"
-        style="@style/PinButton"
+        style="@style/AppButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="3"
+        android:textAppearance="@style/PinButtonTextAppearance"
         app:layout_constraintBottom_toBottomOf="@id/btn_two"
         app:layout_constraintStart_toEndOf="@id/btn_two" />
 
     <Button
         android:id="@+id/btn_zero"
-        style="@style/PinButton"
+        style="@style/AppButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="0"
+        android:textAppearance="@style/PinButtonTextAppearance"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_eight" />
 
     <Button
         android:id="@+id/btn_backspace"
-        style="@style/PinButton"
+        style="@style/AppButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:text="&lt;"
+        android:textAppearance="@style/PinButtonTextAppearance"
         app:layout_constraintBottom_toBottomOf="@id/btn_zero"
         app:layout_constraintEnd_toStartOf="@id/btn_zero" />
 
     <Button
         android:id="@+id/btn_ok"
-        style="@style/PinButton"
+        style="@style/AppButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="@android:string/ok"
+        android:textAppearance="@style/PinButtonTextAppearance"
         app:layout_constraintBottom_toBottomOf="@id/btn_zero"
         app:layout_constraintStart_toEndOf="@id/btn_zero" />
 

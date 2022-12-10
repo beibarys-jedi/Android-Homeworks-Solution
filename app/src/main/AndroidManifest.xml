@@ -27,7 +27,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".SecondActivity" />
+        <activity android:name=".ResultActivity" />
     </application>
 
 </manifest>
