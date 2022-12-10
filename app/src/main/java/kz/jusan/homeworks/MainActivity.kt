@@ -25,5 +25,13 @@ class MainActivity : AppCompatActivity(), NewsClickListener {
 
     override fun onNewsClick(news: News) {
         Log.e(TAG, "News details: = $news")
+
+        val newsDetailsFragment = NewsDetailsFragment.newInstance(news)
+
+        supportFragmentManager
+            .beginTransaction()
+            .add(R.id.fl_details, newsDetailsFragment)
+            .addToBackStack(null)
+            .commit()
     }
 }
